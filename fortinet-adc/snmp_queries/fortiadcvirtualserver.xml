@@ -1,0 +1,67 @@
+<fortiadc>
+	<name>Get FortiADC virtual server statistics</name>
+	<description>Queries a FortiADC load balancer for a list of virtual servers</description>
+	<oid_index>.1.3.6.1.4.1.12356.112.3.2.1.1</oid_index>
+	<index_order>virtualServer:status:health</index_order>
+	<index_order_type>numeric</index_order_type>
+	<index_title_format>|chosen_order_field|</index_title_format>
+
+	<fields>
+		<index>
+			<name>Index</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>input</direction>
+			<oid>.1.3.6.1.4.1.12356.112.3.2.1.1</oid>
+		</index>
+		<virtualServer>
+			<name>Virtual Server</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>input</direction>
+			<oid>.1.3.6.1.4.1.12356.112.3.2.1.2</oid>
+		</virtualServer>
+		<status>
+			<name>Status</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>input</direction>
+			<oid>.1.3.6.1.4.1.12356.112.3.2.1.3</oid>
+		</status>
+		<health>
+			<name>Health</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>input</direction>
+			<oid>.1.3.6.1.4.1.12356.112.3.2.1.4</oid>
+		</health>
+		<cps>
+			<name>Connections per second</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>output</direction>
+			<oid>.1.3.6.1.4.1.12356.112.3.2.1.5</oid>
+		</cps>
+		<concurrent>
+			<name>Concurrent connections</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>output</direction>
+			<oid>.1.3.6.1.4.1.12356.112.3.2.1.6</oid>
+		</concurrent>
+		<throughput>
+			<name>Throughput</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>output</direction>
+			<oid>.1.3.6.1.4.1.12356.112.3.2.1.7</oid>
+		</throughput>
+		<vdom>
+			<name>VDOM</name>
+			<method>walk</method>
+			<source>value</source>
+			<direction>input</direction>
+			<oid>.1.3.6.1.4.1.12356.112.3.2.1.8</oid>
+		</vdom>
+	</fields>
+</fortiadc>

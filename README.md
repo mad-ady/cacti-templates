@@ -13,5 +13,7 @@ The files are located in the fortinet-adc folder.
 4. Import graph_templates/*.xml to Cacti
 ```
 
+Note: due to a software bug if you get timeouts when trying to get the list of the virtual servers, switch your device to use SNMP v1 instead of v2. Cacti uses SNMPBulkWalk in V2 which is not supported correctly by the device.
+
 You can see some sample graphs in the fortinet-adc folder.
 

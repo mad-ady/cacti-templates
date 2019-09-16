@@ -1,0 +1,131 @@
+<query>
+	<name>Get Alcatel Omniswitch SLA information</name>
+	<script_path>/usr/bin/perl |path_cacti|/scripts/omniswitch-sla.pl</script_path>
+	<arg_prepend>|host_hostname| |host_snmp_community| |host_snmp_version|</arg_prepend>
+	<arg_index>index</arg_index>
+	<arg_query>query</arg_query>
+	<arg_get>get</arg_get>
+	<output_delimeter>!</output_delimeter>
+	<fields>
+		<!--Input fields-->
+		<index>
+			<name>index</name>
+			<direction>input</direction>
+			<query_name>index</query_name>
+		</index>
+		<type>
+			<name>Probe type</name>
+			<direction>input</direction>
+			<query_name>type</query_name>
+		</type>
+		<description>
+			<name>Description</name>
+			<direction>input</direction>
+			<query_name>description</query_name>
+		</description>
+		<status>
+			<name>Status</name>
+			<direction>input</direction>
+			<query_name>status</query_name>
+		</status>
+		<srcMep>
+			<name>Source MEP ID</name>
+			<direction>input</direction>
+			<query_name>srcMep</query_name>
+		</srcMep>
+		<dstMep>
+			<name>Destination MEP ID</name>
+			<direction>input</direction>
+			<query_name>dstMep</query_name>
+		</dstMep>
+
+		<!--Output fields-->
+
+		<l3pktsent>
+			<name>L3 Packets sent</name>
+			<direction>output</direction>
+			<query_name>l3pktsent</query_name>
+		</l3pktsent>
+		<l3pktrcvd>
+			<name>L3 Packets received</name>
+			<direction>output</direction>
+			<query_name>l3pktrcvd</query_name>
+		</l3pktrcvd>
+		<l3result>
+			<name>L3 Test result</name>
+			<direction>output</direction>
+			<query_name>l3result</query_name>
+		</l3result>
+		<l3minRTT>
+			<name>L3 Min RTT</name>
+			<direction>output</direction>
+			<query_name>l3minRTT</query_name>
+		</l3minRTT>
+		<l3avgRTT>
+			<name>L3 Avg RTT</name>
+			<direction>output</direction>
+			<query_name>l3avgRTT</query_name>
+		</l3avgRTT>
+		<l3maxRTT>
+			<name>L3 Max RTT</name>
+			<direction>output</direction>
+			<query_name>l3maxRTT</query_name>
+		</l3maxRTT>
+		<l3minJitter>
+			<name>L3 Min Jitter</name>
+			<direction>output</direction>
+			<query_name>l3minJitter</query_name>
+		</l3minJitter>
+		<l3avgJitter>
+			<name>L3 Avg Jitter</name>
+			<direction>output</direction>
+			<query_name>l3avgJitter</query_name>
+		</l3avgJitter>
+		<l3maxJitter>
+			<name>L3 Max Jitter</name>
+			<direction>output</direction>
+			<query_name>l3maxJitter</query_name>
+		</l3maxJitter>
+		<l2pktsent>
+			<name>L2 Packets sent</name>
+			<direction>output</direction>
+			<query_name>l2pktsent</query_name>
+		</l2pktsent>
+		<l2pktrcvd>
+			<name>L2 Packets received</name>
+			<direction>output</direction>
+			<query_name>l2pktrcvd</query_name>
+		</l2pktrcvd>
+		<l2minRTT>
+			<name>L2 Min RTT</name>
+			<direction>output</direction>
+			<query_name>l2minRTT</query_name>
+		</l2minRTT>
+		<l2avgRTT>
+			<name>L2 Avg RTT</name>
+			<direction>output</direction>
+			<query_name>l2avgRTT</query_name>
+		</l2avgRTT>
+		<l2maxRTT>
+			<name>L2 Max RTT</name>
+			<direction>output</direction>
+			<query_name>l2maxRTT</query_name>
+		</l2maxRTT>
+		<l2minJitter>
+			<name>L2 Min Jitter</name>
+			<direction>output</direction>
+			<query_name>l2minJitter</query_name>
+		</l2minJitter>
+		<l2avgJitter>
+			<name>L2 Avg Jitter</name>
+			<direction>output</direction>
+			<query_name>l2avgJitter</query_name>
+		</l2avgJitter>
+		<l2maxJitter>
+			<name>L2 Max Jitter</name>
+			<direction>output</direction>
+			<query_name>l2maxJitter</query_name>
+		</l2maxJitter>
+
+	</fields>
+</query>

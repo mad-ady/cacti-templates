@@ -31,3 +31,17 @@ The files are located in the alcatel-lucent-omniswitch folder.
 
 You can see some sample graphs in the alcatel-lucent-omniswitch folder.
 
+
+# ADVA DWDM #
+Implements the SNMP MIB 1.3.6.1.4.1.6908.1.7.5.11.1 for optical measurements on ADVA DWDM gear. The measurements are G709 FEC, Uncorrected bytes, Path, Section, Optical power, OPR.
+
+**Installation**
+The files are located in the adva-dwdm folder.
+```
+1. Copy scripts/*.pl  to <cacti_dir>/scripts/
+2. Copy script_queries/*.xml to <cacti_dir>/resource/script_queries/
+3. Import host_templates/*.xml to Cacti
+```
+
+You can see some sample graphs in adva-dwdm folder.
+

@@ -1,0 +1,136 @@
+<query>
+	<name>Get Adva DWDM Port statistics</name>
+	<script_path>/usr/bin/perl |path_cacti|/scripts/advadwdm.pl</script_path>
+	<arg_prepend>|host_hostname| |host_snmp_community| |host_snmp_version|</arg_prepend>
+	<arg_index>index</arg_index>
+	<arg_query>query</arg_query>
+	<arg_get>get</arg_get>
+	<output_delimeter>!</output_delimeter>
+	<fields>
+		<!--Input fields-->
+		<ifIndex>
+			<name>index</name>
+			<direction>input</direction>
+			<query_name>ifIndex</query_name>
+		</ifIndex>
+		<ifRack>
+			<name>Rack</name>
+			<direction>input</direction>
+			<query_name>ifRack</query_name>
+		</ifRack>
+		<ifShelf>
+			<name>Shelf</name>
+			<direction>input</direction>
+			<query_name>ifShelf</query_name>
+		</ifShelf>
+		<ifSlot>
+			<name>Slot</name>
+			<direction>input</direction>
+			<query_name>ifSlot</query_name>
+		</ifSlot>
+		<ifPort>
+			<name>Port</name>
+			<direction>input</direction>
+			<query_name>ifPort</query_name>
+		</ifPort>
+		<ifType>
+			<name>Type</name>
+			<direction>input</direction>
+			<query_name>ifType</query_name>
+		</ifType>
+		<ifOperStatus>
+			<name>Operational Status</name>
+			<direction>input</direction>
+			<query_name>ifOperStatus</query_name>
+		</ifOperStatus>
+		<ifUserLabel>
+			<name>Label</name>
+			<direction>input</direction>
+			<query_name>ifUserLabel</query_name>
+		</ifUserLabel>
+
+		<!--Output fields-->
+
+		<oprosc>
+			<name>OPROSC - Optical Power Received on the OSC</name>
+			<direction>output</direction>
+			<query_name>oprosc</query_name>
+		</oprosc>
+		<opr>
+			<name>OPR - Optical Power Received</name>
+			<direction>output</direction>
+			<query_name>opr</query_name>
+		</opr>
+		<opt>
+			<name>OPT - Optical Power Transmitted</name>
+			<direction>output</direction>
+			<query_name>opt</query_name>
+		</opt>
+		<section_es>
+			<name>Section ES</name>
+			<direction>output</direction>
+			<query_name>section_es</query_name>
+		</section_es>
+		<section_ses>
+			<name>Section SES</name>
+			<direction>output</direction>
+			<query_name>section_ses</query_name>
+		</section_ses>
+		<section_sefs>
+			<name>Section SEFS</name>
+			<direction>output</direction>
+			<query_name>section_sefs</query_name>
+		</section_sefs>
+		<section_cv>
+			<name>Section CV</name>
+			<direction>output</direction>
+			<query_name>section_cv</query_name>
+		</section_cv>
+		<path_es>
+			<name>Path ES</name>
+			<direction>output</direction>
+			<query_name>path_es</query_name>
+		</path_es>
+		<path_ses>
+			<name>Path SES</name>
+			<direction>output</direction>
+			<query_name>path_ses</query_name>
+		</path_ses>
+		<path_uas>
+			<name>Path UAS</name>
+			<direction>output</direction>
+			<query_name>path_uas</query_name>
+		</path_uas>
+		<path_cv>
+			<name>Path CV</name>
+			<direction>output</direction>
+			<query_name>path_cv</query_name>
+		</path_cv>
+		<path_fc>
+			<name>Path FC</name>
+			<direction>output</direction>
+			<query_name>path_fc</query_name>
+		</path_fc>
+		<fec_corrected_bits>
+			<name>FEC Corrected bits</name>
+			<direction>output</direction>
+			<query_name>fec_corrected_bits</query_name>
+		</fec_corrected_bits>
+		<fec_corrected_ones>
+			<name>FEC Corrected ones</name>
+			<direction>output</direction>
+			<query_name>fec_corrected_ones</query_name>
+		</fec_corrected_ones>
+		<fec_corrected_zeros>
+			<name>FEC Corrected zeros</name>
+			<direction>output</direction>
+			<query_name>fec_corrected_zeros</query_name>
+		</fec_corrected_zeros>
+		<fec_uncorrected_bytes>
+			<name>FEC Uncorrected bytes</name>
+			<direction>output</direction>
+			<query_name>fec_uncorrected_bytes</query_name>
+		</fec_uncorrected_bytes>
+
+	</fields>
+</query>
